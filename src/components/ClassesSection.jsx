@@ -1,6 +1,6 @@
 import React from 'react';
 import './ClassesSection.css';
-import danceImage from '../assets/class_image.png'; // Adjust path if needed
+import danceImage from '../assets/class_image.png'; 
 
 const ClassesSection = () => {
   return (
