@@ -1,0 +1,68 @@
+.why-dance {
+  background-color: #0e0e0e;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.feature {
+  flex: 1 1 220px;
+  max-width: 260px;
+  text-align: center;
+}
+
+.icon-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid magenta;
+  padding: 10px;
+  margin: 0 auto 20px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper img {
+  width: 80%;
+  height: auto;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.ref {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 6px;
+}
