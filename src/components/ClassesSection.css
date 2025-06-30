@@ -1,64 +1,70 @@
 .classes-section {
-  background-color: #111; /* dark background */
-  padding: 60px 20px;
+  background: linear-gradient(135deg, #2a0d45, #4a004d); /* Softer plum-mauve blend */
+  padding: 80px 20px;
   color: #fff;
+  overflow: hidden;
 }
 
 .classes-container {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap;
-  gap: 40px;
+  gap: 60px;
 }
 
 .classes-image img {
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 14px;
   width: 500px;
   height: auto;
+  box-shadow: 0 10px 30px rgba(255, 0, 128, 0.25); /* Soft neon glow */
 }
 
 .classes-content {
   max-width: 600px;
+  text-align: left;
 }
 
 .classes-content h2 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  line-height: 1.2;
 }
 
 .classes-content h2 .highlight {
-  background: linear-gradient(90deg, #ffffff, #9999ff);
+  background: linear-gradient(90deg, #ff6ec4, #ffa600); /* Pink to orange */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-
 .classes-content p {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.7;
   margin-bottom: 30px;
-  color: #ccc;
+  color: #f0e6f6; /* Soft lavender-white for better readability */
 }
 
 .classes-button {
-  background-color: #ff00cc;
+  background: linear-gradient(90deg, #ff00cc, #ff6ec4);
   color: white;
-  padding: 12px 24px;
+  padding: 14px 28px;
   border: none;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
 }
 
 .classes-button:hover {
-  background-color: #e600b3;
+  background: linear-gradient(90deg, #ff0080, #ffa600);
+  transform: translateY(-2px);
 }
 
 /* Responsive */
@@ -70,5 +76,13 @@
 
   .classes-image img {
     width: 100%;
+  }
+
+  .classes-content h2 {
+    font-size: 32px;
+  }
+
+  .classes-content p {
+    font-size: 16px;
   }
 }

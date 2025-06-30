@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Navbar.css";
+import "./navbar.css";
 
 const Chevron = () => (
   <svg
@@ -25,7 +25,10 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">THE STUDIO</div>
+    <div className="logo">
+      <span className="underline">VIJAYA</span> <span>STUDIO</span>
+   </div>
+
 
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
@@ -35,7 +38,9 @@ const Navbar = () => {
       <div className="nav-content desktop-only">
         <ul className="nav-links">
           <li className="dropdown">
-            NEW TO THE STUDIO <Chevron />
+            <span className="dropdown-toggle">
+              NEW TO THE STUDIO <Chevron />
+            </span>
             <ul className="dropdown-menu">
               <li>Start Here</li>
               <li>The Classes</li>
@@ -43,7 +48,9 @@ const Navbar = () => {
             </ul>
           </li>
           <li className="dropdown">
-            TAKE A CLASS <Chevron />
+            <span className="dropdown-toggle">
+              TAKE A CLASS <Chevron />
+            </span>
             <ul className="dropdown-menu">
               <li>From Home</li>
               <li>Digital Schedule</li>
@@ -56,7 +63,9 @@ const Navbar = () => {
           <li>EXPLORE</li>
           <li>COMMUNITY</li>
           <li className="dropdown">
-            SHOP <Chevron />
+            <span className="dropdown-toggle">
+              SHOP <Chevron />
+            </span>
             <ul className="dropdown-menu">
               <li>Apparel</li>
               <li>Digital Workouts</li>

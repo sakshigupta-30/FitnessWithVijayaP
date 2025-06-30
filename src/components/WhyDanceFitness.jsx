@@ -9,38 +9,53 @@ import danceIcon from '../assets/icons/dance.svg';
 const features = [
   {
     icon: heartIcon,
-    title: 'Cardio, Flexibility & Burn',
-    desc: 'Boosts cardio health, flexibility, and endurance — 500–800 cal/hr burn',
+    title: 'Sweat with Purpose',
+    desc: 'Burn up to 800 calories/hour with high-energy routines that keep your heart pumping and your spirit soaring.',
     source: 'womenfitness.org',
   },
   {
     icon: musclesIcon,
-    title: 'Muscle Toning',
-    desc: 'Tone muscles through functional choreography',
+    title: 'Tone While You Groove',
+    desc: 'Build strength and definition through powerful, dance-infused moves — no equipment, just rhythm.',
   },
   {
     icon: energyIcon,
-    title: 'Stress & Mood Benefits',
-    desc: 'Reduces stress, elevates mood, and builds confidence',
+    title: 'Recharge Your Soul',
+    desc: 'Let go of stress and step into joy. Every session leaves you smiling, recharged, and ready for more.',
   },
   {
     icon: danceIcon,
-    title: 'Fun & Accessible',
-    desc: 'Dance-led fitness — accessible to all, even with “two left feet”',
+    title: 'Everyone Belongs',
+    desc: 'From beginners to dance lovers — this is your space to move freely, fearlessly, and fabulously.',
     source: 'womenfitness.org',
   },
 ];
 
 const WhyDanceFitness = () => {
   return (
-    <section className="why-dance">
+    <section
+      className="why-dance"
+      data-aos="fade"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <div className="header">
-        <h2>💡 Why DanceFitness with Vijaya?</h2>
-        <p className="subtitle">Transformative Benefits</p>
+        <h2>Why Choose Dance Fitness with Vijaya?</h2>
+        <p className="subtitle">
+          Not just a workout — it’s a celebration of movement, energy, and self-love.
+        </p>
       </div>
+
       <div className="features">
         {features.map((item, index) => (
-          <div key={index} className="feature">
+          <div
+            key={index}
+            className="feature"
+            data-aos="fade"
+            data-aos-delay={index * 150}
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <div className="icon-wrapper">
               <img src={item.icon} alt={item.title} />
             </div>

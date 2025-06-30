@@ -13,17 +13,20 @@ const HeroSection = () => {
         playsInline
       ></video>
 
-      {/* Purple Overlay */}
       <div className="hero-overlay"></div>
 
       <div className="hero-content">
-        <h1>IGNITE THE FIRE WITHIN</h1>
+        <h1>
+          <span className="underline">DANCE</span> YOUR HEART OUT WITH{" "}
+          <span className="underline">VIJAYA</span>
+        </h1>
         <p>
-          with daily fitness parties you’ll find yourself looking forward to rather than
-          dreading. Find freedom through movement with Jamie, her team of amazing instructors,
-          and our supportive and inclusive community.
+          Step into a space where movement meets joy! Led by Zumba expert Vijaya
+          Tupurani, our sessions are not just workouts — they’re high-energy dance
+          experiences that empower you to feel confident, strong, and unstoppable.
         </p>
-        <button className="cta-button">BEGIN YOUR JOURNEY</button>
+        <button className="cta-button">LET’S GROOVE TOGETHER</button>
+        <p className="tagline">Live · Love · Inspire</p>
       </div>
     </section>
   );

@@ -1,23 +1,30 @@
 import React from 'react';
 import './ClassesSection.css';
-import danceImage from '../assets/class_image.png'; // Adjust path if needed
+import danceImage from '../assets/class_image.png';
 
 const ClassesSection = () => {
   return (
-    <section className="classes-section">
+    <section
+      className="classes-section"
+      data-aos="fade"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <div className="classes-container">
-        <div className="classes-image">
-          <img src={danceImage} alt="Dance Class" />
+        <div className="classes-image" data-aos="fade" data-aos-delay="200">
+          <img src={danceImage} alt="Zumba Class with Vijaya" />
         </div>
-        <div className="classes-content">
-          <h2><span className="highlight">THE</span> CLASSES</h2>
+
+        <div className="classes-content" data-aos="fade" data-aos-delay="400">
+          <h2>
+            <span className="highlight">FIND</span> YOUR BEAT
+          </h2>
           <p>
-            All of our formats are unique to The Studio and were created by our team with the intention
-            of giving you back pieces of yourself we all tend to lose as we experience different stages of life.
-            Whether that missing thing is confidence, friendship, motivation, or the freedom to dance wildly,
-            we are here for <strong>ALL OF IT</strong>.
+            From high-energy Zumba sessions to soulful stretches, Vijaya’s classes are crafted
+            to reconnect you with your rhythm, strength, and joy. Whether you're dancing off stress,
+            building confidence, or simply having fun — you're exactly where you belong.
           </p>
-          <button className="classes-button">SEE THEM ALL</button>
+          <button className="classes-button">EXPLORE CLASSES</button>
         </div>
       </div>
     </section>
