@@ -1,5 +1,6 @@
 .vijaya-section {
-  background-color: #4a0072; /* deep purple from your theme */
+   background: linear-gradient(135deg, #3a1c5c, #5c2671); /* Lighter, rich purple */
+  padding: 80px 20px;/* deep purple from your theme */
   padding: 60px 20px;
   color: #fff;
 }

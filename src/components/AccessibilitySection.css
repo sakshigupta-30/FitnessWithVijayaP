@@ -1,5 +1,6 @@
 .access-section {
-  background-color: #4a0072; /* Updated to deep purple theme */
+   background: linear-gradient(135deg, #3a1c5c, #5c2671); /* Lighter, rich purple */
+  padding: 80px 20px; /* Updated to deep purple theme */
   padding: 60px 20px;
   color: #fff;
   text-align: center;

@@ -7,10 +7,10 @@ const MeetVijaya = () => {
   const youtubeURL = 'https://www.youtube.com/@vijayatupurani'; // your actual channel or video URL
 
   return (
-    <section className="vijaya-section" data-aos="fade-up">
-      <div className="vijaya-container">
+    <section className="vijaya-section">
+      <div className="vijaya-container" data-aos="fade-up">
         <div className="vijaya-text">
-          <h2><span className="highlight">MEET</span> VIJAYA TUPURANI</h2>
+          <h2><span className="highlight" >MEET</span> VIJAYA TUPURANI</h2>
           <ul>
             <li>Trained in classical dance since age 3; certified Zumba instructor since 2012</li>
             <li>Army officer’s wife, mother of twins — balances family & fitness with grace</li>

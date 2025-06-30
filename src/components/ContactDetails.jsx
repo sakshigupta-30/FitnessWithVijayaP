@@ -3,8 +3,9 @@ import './ContactDetails.css';
 
 const ContactDetails = () => {
   return (
-    <section className="contact-section" data-aos="fade-up">
-      <h2><span className="highlight">Contact</span> Us</h2>
+    <section className="contact-section">
+      <div data-aos="fade-up">
+    <h2><span className="highlight">Contact</span> Us</h2>
       <p>
         Have questions? Send us an email at <br />
         <a href="mailto:vijaya.tupurani@gmail.com">
@@ -26,6 +27,7 @@ const ContactDetails = () => {
           support@vijayatupurani.com
         </a>
       </p>
+      </div>
     </section>
   );
 };
