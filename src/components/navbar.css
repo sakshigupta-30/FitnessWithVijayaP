@@ -151,7 +151,7 @@
 }
 
 .sign-in:hover {
-  background-color: #5a0aaa;
+   background: linear-gradient(135deg, #3a1c5c, #5c2671);
 }
 
 .trial {
