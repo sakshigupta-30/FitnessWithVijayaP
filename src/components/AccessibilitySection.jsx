@@ -25,15 +25,22 @@ const AccessibilitySection = () => {
     <section className="access-section">
       <div className="access-container">
         <h2><span className="highlight">ACCESSIBILITY</span>: IN‑PERSON & ONLINE</h2>
+
         <div className="mode-grid">
           {modes.map((mode, index) => (
-            <div className="mode-card" key={index}>
+            <div
+              className="mode-card"
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 150} // 0ms, 150ms, 300ms, 450ms
+            >
               <h3>{mode.title}</h3>
               <p>{mode.description}</p>
             </div>
           ))}
         </div>
-        <div className="access-buttons">
+
+        <div className="access-buttons" data-aos="fade-up" data-aos-delay="600">
           <button className="access-btn primary">BROWSE CLASSES</button>
           <button className="access-btn">JOIN LIVE</button>
         </div>

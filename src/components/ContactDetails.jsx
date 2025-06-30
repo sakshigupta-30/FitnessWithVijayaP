@@ -1,11 +1,10 @@
-// ContactDetails.jsx
 import React from 'react';
 import './ContactDetails.css';
 
 const ContactDetails = () => {
   return (
-    <section className="contact-section">
-      <h2>Contact Us</h2>
+    <section className="contact-section" data-aos="fade-up">
+      <h2><span className="highlight">Contact</span> Us</h2>
       <p>
         Have questions? Send us an email at <br />
         <a href="mailto:vijaya.tupurani@gmail.com">
@@ -13,7 +12,11 @@ const ContactDetails = () => {
         </a>
         <br />
         or reach out via YouTube at <br />
-        <a href="https://www.youtube.com/@vijayatupurani" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.youtube.com/@vijayatupurani"
+          target="_blank"
+          rel="noreferrer"
+        >
           youtube.com/@vijayatupurani
         </a>
       </p>

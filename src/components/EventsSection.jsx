@@ -25,12 +25,17 @@ const EventsSection = () => {
     <section className="events-section">
       <div className="events-container">
         <h2><span className="highlight">EVENTS</span> & RETREATS</h2>
-        <p className="events-intro">
+        <p className="events-intro" data-aos="fade-up" data-aos-delay="100">
           Join us for high-energy weekends, pool parties, and themed dance getaways!
         </p>
         <div className="events-grid">
           {events.map((event, index) => (
-            <div className="event-card" key={index}>
+            <div
+              className="event-card"
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
+            >
               <h3>{event.title}</h3>
               <p>{event.description}</p>
             </div>

@@ -1,5 +1,5 @@
 .classes-section {
-  background: linear-gradient(135deg, #2a0d45, #4a004d); /* Softer plum-mauve blend */
+  background: linear-gradient(135deg, #3a1c5c, #5c2671); /* Lighter, rich purple */
   padding: 80px 20px;
   color: #fff;
   overflow: hidden;
@@ -20,7 +20,7 @@
   border-radius: 14px;
   width: 500px;
   height: auto;
-  box-shadow: 0 10px 30px rgba(255, 0, 128, 0.25); /* Soft neon glow */
+  box-shadow: 0 10px 30px rgba(255, 0, 128, 0.2);
 }
 
 .classes-content {
@@ -36,7 +36,7 @@
 }
 
 .classes-content h2 .highlight {
-  background: linear-gradient(90deg, #ff6ec4, #ffa600); /* Pink to orange */
+  background: linear-gradient(90deg, #ff6ec4, #ffa600);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,7 +46,7 @@
   font-size: 17px;
   line-height: 1.7;
   margin-bottom: 30px;
-  color: #f0e6f6; /* Soft lavender-white for better readability */
+  color: #f0e6f6;
 }
 
 .classes-button {

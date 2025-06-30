@@ -32,6 +32,7 @@ useEffect(() => {
       <WhyDanceFitness />
       <ClassesSection />
       <MeetVijaya />
+      <div className="section-divider" data-aos="fade-up"></div>
       <AccessibilitySection />
       <EventsSection />
       <ContactDetails />

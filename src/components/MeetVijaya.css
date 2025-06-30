@@ -1,5 +1,5 @@
 .vijaya-section {
-  background-color: #111;
+  background-color: #4a0072; /* deep purple from your theme */
   padding: 60px 20px;
   color: #fff;
 }
@@ -25,7 +25,7 @@
 }
 
 .vijaya-text h2 .highlight {
-  background: linear-gradient(90deg, #ffffff, #9999ff);
+  background: linear-gradient(90deg, #ff4bb5, #ff6a00);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -35,7 +35,7 @@
   list-style-type: disc;
   padding-left: 20px;
   margin-bottom: 30px;
-  color: #ccc;
+  color: #ddd;
   line-height: 1.6;
 }
 
@@ -48,10 +48,20 @@
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  text-decoration: none;
 }
 
 .vijaya-button:hover {
   background-color: #e600b3;
+}
+
+.youtube-icon {
+  font-size: 18px;
+  color: white;
 }
 
 .vijaya-image img {

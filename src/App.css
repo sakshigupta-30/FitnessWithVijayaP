@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.section-divider {
+  height: 6px;
+  width: 80%;
+  margin: 80px auto;
+  border-radius: 4px;
+  background: linear-gradient(to right, #d695ff, #ff4bb5, #ff6a00); /* lavender → pink → orange */
+  opacity: 0.9;
+  animation: expandFade 1s ease-in-out;
+}
+
+@keyframes expandFade {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 80%;
+    opacity: 0.9;
+  }
+}

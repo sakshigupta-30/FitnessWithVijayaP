@@ -1,13 +1,10 @@
-// Footer.jsx
 import React from 'react';
 import './Footer.css';
-import { FaInstagram, FaFacebookF, FaYoutube, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaYoutube, FaTiktok, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      
-
       <div className="footer-links">
         <a href="#">Redeem a gift card</a>
         <a href="#">Buy a gift card</a>
@@ -19,16 +16,12 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>© Vijaya Tupurani</p>
 
-        <div className="app-buttons">
-          <a href="#"><img src="/appstore.png" alt="Download on App Store" /></a>
-          <a href="#"><img src="/googleplay.png" alt="Get it on Google Play" /></a>
-        </div>
-
+        {/* Removed app buttons completely */}
         <div className="social-icons">
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaFacebookF /></a>
-          <a href="#"><FaYoutube /></a>
-          <a href="#"><FaTiktok /></a>
+          <a href="https://www.instagram.com/vijaya.tupurani/?hl=en" target="_blank" rel="noreferrer"><FaInstagram /></a>
+          <a href="https://www.facebook.com/vijayatupurani" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+          <a href="https://www.youtube.com/@vijayatupurani" target="_blank" rel="noreferrer"><FaYoutube /></a>
+          <a href="https://twitter.com/VijayaTupurani" target="_blank" rel="noreferrer"><FaTwitter /></a>
         </div>
       </div>
     </footer>

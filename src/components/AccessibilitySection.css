@@ -1,5 +1,5 @@
 .access-section {
-  background-color: #111;
+  background-color: #4a0072; /* Updated to deep purple theme */
   padding: 60px 20px;
   color: #fff;
   text-align: center;
@@ -17,7 +17,7 @@
 }
 
 .access-container h2 .highlight {
-  background: linear-gradient(90deg, #ffffff, #9999ff);
+  background: linear-gradient(90deg, #ff4bb5, #ff6a00); /* Neon pink to orange */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -31,15 +31,15 @@
 }
 
 .mode-card {
-  background-color: #1c1c1c;
+  background-color: #611b8f; /* lighter than base purple */
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 0, 204, 0.2);
-  transition: transform 0.2s ease;
+  box-shadow: 0 0 12px rgba(255, 0, 204, 0.25); /* subtle glow */
+  transition: transform 0.3s ease;
 }
 
 .mode-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 .mode-card h3 {
@@ -50,7 +50,7 @@
 
 .mode-card p {
   font-size: 14px;
-  color: #ccc;
+  color: #ddd;
 }
 
 .access-buttons {
@@ -66,9 +66,14 @@
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
   background-color: #222;
   color: #fff;
+}
+
+.access-btn:hover {
+  background-color: #333;
+  transform: translateY(-2px);
 }
 
 .access-btn.primary {
@@ -77,8 +82,4 @@
 
 .access-btn.primary:hover {
   background-color: #e600b3;
-}
-
-.access-btn:hover {
-  background-color: #333;
 }
