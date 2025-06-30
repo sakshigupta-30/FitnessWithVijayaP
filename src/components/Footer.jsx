@@ -6,9 +6,7 @@ import { FaInstagram, FaFacebookF, FaYoutube, FaTiktok } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-logo">
-        <img src="/logo.svg" alt="Vijaya Tupurani Logo" />
-      </div>
+      
 
       <div className="footer-links">
         <a href="#">Redeem a gift card</a>
