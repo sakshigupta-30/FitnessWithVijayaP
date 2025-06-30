@@ -11,7 +11,6 @@ const features = [
     icon: heartIcon,
     title: 'Sweat with Purpose',
     desc: 'Burn up to 800 calories/hour with high-energy routines that keep your heart pumping and your spirit soaring.',
-    source: 'womenfitness.org',
   },
   {
     icon: musclesIcon,
@@ -27,7 +26,6 @@ const features = [
     icon: danceIcon,
     title: 'Everyone Belongs',
     desc: 'From beginners to dance lovers — this is your space to move freely, fearlessly, and fabulously.',
-    source: 'womenfitness.org',
   },
 ];
 
