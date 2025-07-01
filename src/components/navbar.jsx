@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.css";
 
 const Chevron = () => (
@@ -22,6 +22,10 @@ const Chevron = () => (
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", menuOpen);
+  }, [menuOpen]);
 
   return (
     <nav className="navbar">
