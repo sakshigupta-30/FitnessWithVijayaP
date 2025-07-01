@@ -2,10 +2,11 @@ body.menu-open {
   overflow: hidden;
 }
 
+/* 🔥 Faster Animation for Mobile Menu */
 @keyframes fadeSlideDown {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
   to {
     opacity: 1;
@@ -15,7 +16,7 @@ body.menu-open {
 
 .navbar {
   background-color: #FDFBFB;
-  color: #333333;
+  color: #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +29,6 @@ body.menu-open {
 }
 
 .logo {
-  display: inline-block;
   font-weight: bold;
   font-size: 18px;
   position: relative;
@@ -71,11 +71,12 @@ body.menu-open {
   font-size: 14px;
   white-space: nowrap;
 }
+
 .nav-links li {
   position: relative;
   cursor: pointer;
+  color: #333;
   transition: color 0.2s ease;
-  color: #333333;
 }
 .nav-links li:hover {
   color: #FF4C91;
@@ -103,20 +104,19 @@ body.menu-open {
 }
 .arrow {
   transition: transform 0.3s ease;
-  transform-origin: center;
 }
-.dropdown:hover .dropdown-toggle .arrow {
+.dropdown:hover .arrow {
   transform: rotate(180deg);
 }
 .dropdown-menu {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-12px);
-  transition: opacity 0.25s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 10px 0;
   min-width: 180px;
   border-radius: 6px;
@@ -131,9 +131,7 @@ body.menu-open {
 }
 .dropdown-menu li {
   padding: 10px 20px;
-  white-space: nowrap;
-  color: #333333;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  color: #333;
 }
 .dropdown-menu li:hover {
   background-color: #FFE5F1;
@@ -145,14 +143,13 @@ body.menu-open {
   gap: 10px;
 }
 .sign-in {
-  background-color: #6A0DAD;
+  background: #6A0DAD;
   color: white;
   border: none;
   padding: 10px 16px;
   border-radius: 6px;
-  cursor: pointer;
   font-weight: 600;
-  transition: background-color 0.2s ease;
+  cursor: pointer;
 }
 .sign-in:hover {
   background: linear-gradient(135deg, #3a1c5c, #5c2671);
@@ -163,23 +160,15 @@ body.menu-open {
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
-  cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
   transition: opacity 0.2s ease;
 }
 .trial:hover {
   opacity: 0.9;
 }
-.sign-in,
-.trial {
-  white-space: nowrap;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
 
-/* ===== Mobile Menu ===== */
+/* ===== Mobile Styling ===== */
 .hamburger {
   font-size: 26px;
   display: none;
@@ -208,7 +197,7 @@ body.menu-open {
     gap: 20px;
     z-index: 999;
     box-sizing: border-box;
-    animation: fadeSlideDown 0.4s ease forwards;
+    animation: fadeSlideDown 0.25s ease forwards;
   }
 
   .mobile-links {
@@ -220,9 +209,9 @@ body.menu-open {
   }
 
   .mobile-links li {
-    cursor: pointer;
     padding-left: 10px;
-    color: #333333;
+    cursor: pointer;
+    color: #333;
   }
 
   .mobile-links li:hover {
