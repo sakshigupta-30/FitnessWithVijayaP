@@ -1,3 +1,4 @@
+/* ✅ HERO SECTION */
 .hero-section {
   position: relative;
   height: 100vh;
@@ -8,9 +9,10 @@
   justify-content: center;
   color: white;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Background Video */
+/* 🎥 Background Video */
 .hero-video {
   position: absolute;
   top: 0;
@@ -22,7 +24,7 @@
   filter: brightness(0.65);
 }
 
-/* Overlay */
+/* 🌈 Overlay Gradient */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -37,7 +39,7 @@
   z-index: -1;
 }
 
-/* Content */
+/* 🎤 Content Container */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -49,11 +51,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   animation: fadeInUp 1s ease forwards;
   opacity: 0;
 }
 
+/* 🎞️ Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -65,7 +67,7 @@
   }
 }
 
-/* Headline */
+/* 🧢 Heading */
 .hero-content h1 {
   font-size: 3rem;
   font-weight: 900;
@@ -73,17 +75,27 @@
   line-height: 1.2;
   color: white;
   text-transform: uppercase;
+  text-align: center;
 }
 
-/* Underline */
-.hero-content .underline {
-  border-bottom: 3px solid transparent;
-  border-image: linear-gradient(to right, #FF6600, #FF4C91);
-  border-image-slice: 1;
-  padding-bottom: 4px;
+/* 🌈 Underline using ::after (better rendering) */
+.underline {
+  position: relative;
+  display: inline-block;
 }
 
-/* Paragraph */
+.underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #ff6600, #ff4c91);
+  border-radius: 2px;
+}
+
+/* 📝 Paragraph */
 .hero-content p {
   font-size: 1.125rem;
   line-height: 1.6;
@@ -91,9 +103,9 @@
   color: #ffffff;
 }
 
-/* CTA Button */
+/* ✨ CTA Button */
 .cta-button {
-  background: linear-gradient(135deg, #FF6600, #FF4C91);
+  background: linear-gradient(135deg, #ff6600, #ff4c91);
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -109,7 +121,7 @@
   transform: scale(1.03);
 }
 
-/* Tagline */
+/* 💖 Tagline */
 .tagline {
   font-size: 1rem;
   margin-top: 1.25rem;
@@ -118,7 +130,7 @@
   letter-spacing: 1px;
 }
 
-/* 📱 Mobile: ≤768px */
+/* 📱 Tablet & Below (≤768px) */
 @media (max-width: 768px) {
   .hero-video {
     display: none;
@@ -137,6 +149,7 @@
 
   .hero-content h1 {
     font-size: 1.75rem;
+    line-height: 1.3;
     color: #2c2c2c;
   }
 
@@ -166,7 +179,7 @@
   }
 }
 
-/* 📱 Small Phones: ≤480px */
+/* 📱 Extra Small (≤480px) */
 @media (max-width: 480px) {
   .hero-content h1 {
     font-size: 1.5rem;

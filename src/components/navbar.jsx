@@ -25,16 +25,15 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-    <div className="logo">
-      <span className="underline">VIJAYA</span> <span>STUDIO</span>
-   </div>
-
+      <div className="logo">
+        <span className="vijaya">VIJAYA</span>{" "}
+        <span className="studio">STUDIO</span>
+      </div>
 
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
       </div>
 
-      {/* Desktop Nav */}
       <div className="nav-content desktop-only">
         <ul className="nav-links">
           <li className="dropdown">
@@ -73,14 +72,12 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Desktop Buttons */}
         <div className="nav-buttons">
           <button className="sign-in">SIGN IN</button>
           <button className="trial">START YOUR ONLINE TRIAL</button>
         </div>
       </div>
 
-      {/* Mobile Nav */}
       {menuOpen && (
         <div className="mobile-menu">
           <ul className="mobile-links">

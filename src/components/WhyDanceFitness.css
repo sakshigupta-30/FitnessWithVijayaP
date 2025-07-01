@@ -1,8 +1,11 @@
+/* ✅ WHY DANCE SECTION */
 .why-dance {
   background-color: #fffaf9;
   color: #121212;
   padding: 60px 20px 40px;
   text-align: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .header h2 {
@@ -18,23 +21,41 @@
   margin-bottom: 30px;
 }
 
-/* Desktop and larger: Use flex for layout */
+/* ✅ Responsive Grid Layout */
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Fallback default */
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
+/* ✅ Desktop / Laptop (1×4) */
+@media (min-width: 1025px) {
+  .features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ✅ Tablet / Mobile (2×2) */
+@media (max-width: 1024px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 🧩 Feature Box */
 .feature {
-  flex: 1 1 220px;
-  max-width: 240px;
   text-align: center;
   padding: 20px 16px;
   border-radius: 14px;
   background: linear-gradient(135deg, #ffffff 0%, #fff5f7 100%);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .feature:hover {
@@ -42,6 +63,7 @@
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 }
 
+/* 🎯 Icon Styling */
 .icon-wrapper {
   width: 80px;
   height: 80px;
@@ -60,6 +82,7 @@
   height: auto;
 }
 
+/* 💬 Feature Heading & Description */
 .feature h3 {
   font-size: 1rem;
   font-weight: 700;
@@ -81,19 +104,49 @@
   margin-top: 4px;
 }
 
-/* Mobile: Use CSS Grid to force 2 columns */
+/* 📱 Typography Scaling on Smaller Screens */
 @media (max-width: 768px) {
-  .features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 600px;   /* Optional: restrict overall width */
-    margin: 0 auto;     /* Center the grid container */
+  .header h2 {
+    font-size: 1.75rem;
   }
-  
-  /* Remove flex properties to allow grid items to fill columns */
-  .feature {
-    flex: none;
-    max-width: 100%;
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .feature h3 {
+    font-size: 0.95rem;
+  }
+
+  .feature p {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .icon-wrapper {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+  }
+
+  .feature h3 {
+    font-size: 0.9rem;
+  }
+
+  .feature p {
+    font-size: 0.85rem;
+  }
+
+  .ref {
+    font-size: 0.7rem;
   }
 }
