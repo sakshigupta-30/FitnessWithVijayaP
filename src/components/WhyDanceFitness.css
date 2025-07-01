@@ -1,7 +1,7 @@
 .why-dance {
   background-color: #fffaf9;
   color: #121212;
-  padding: 60px 20px 40px; /* reduced bottom padding */
+  padding: 60px 20px 40px;
   text-align: center;
 }
 
@@ -18,11 +18,12 @@
   margin-bottom: 30px;
 }
 
+/* Desktop and larger: Use flex for layout */
 .features {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 32px; /* slightly tighter gap */
+  gap: 32px;
 }
 
 .feature {
@@ -45,15 +46,14 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #fff0e6, #ffe5f0); /* soft orange-pink */
+  background: linear-gradient(135deg, #fff0e6, #ffe5f0);
   padding: 12px;
   margin: 0 auto 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 6px rgba(255, 105, 180, 0.25); /* subtle glow */
+  box-shadow: 0 0 6px rgba(255, 105, 180, 0.25);
 }
-
 
 .icon-wrapper img {
   width: 70%;
@@ -79,4 +79,21 @@
   font-size: 0.75rem;
   color: #999;
   margin-top: 4px;
+}
+
+/* Mobile: Use CSS Grid to force 2 columns */
+@media (max-width: 768px) {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;   /* Optional: restrict overall width */
+    margin: 0 auto;     /* Center the grid container */
+  }
+  
+  /* Remove flex properties to allow grid items to fill columns */
+  .feature {
+    flex: none;
+    max-width: 100%;
+  }
 }

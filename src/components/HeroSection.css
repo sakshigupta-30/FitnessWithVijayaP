@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  padding: 0;
 }
 
 /* Background Video */
@@ -18,10 +19,10 @@
   height: 100%;
   object-fit: cover;
   z-index: -2;
-  filter: brightness(0.65); /* Slightly more contrast */
+  filter: brightness(0.65);
 }
 
-/* Orange Overlay - updated for smooth warmth */
+/* Overlay */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -36,31 +37,45 @@
   z-index: -1;
 }
 
-
-/* Hero Content - centered */
+/* Content */
 .hero-content {
   position: relative;
   z-index: 1;
   max-width: 720px;
+  width: 90%;
   padding: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Headline */
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 900;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   line-height: 1.2;
   color: white;
   text-transform: uppercase;
 }
 
-/* Underline for emphasis */
+/* Underline */
 .hero-content .underline {
   border-bottom: 3px solid transparent;
   border-image: linear-gradient(to right, #FF6600, #FF4C91);
@@ -70,21 +85,21 @@
 
 /* Paragraph */
 .hero-content p {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.6;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
   color: #ffffff;
 }
 
-/* CTA Button - modern gradient */
+/* CTA Button */
 .cta-button {
   background: linear-gradient(135deg, #FF6600, #FF4C91);
   color: white;
-  padding: 16px 32px;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 8px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.3s ease;
 }
@@ -94,31 +109,111 @@
   transform: scale(1.03);
 }
 
-/* Tagline (cleaned) */
+/* Tagline */
 .tagline {
-  font-size: 16px;
-  margin-top: 20px;
+  font-size: 1rem;
+  margin-top: 1.25rem;
   color: #ffcccc;
   font-style: italic;
   letter-spacing: 1px;
 }
 
-/* Responsive adjustments */
+/* 📱 Mobile: ≤768px */
 @media (max-width: 768px) {
+  .hero-video {
+    display: none;
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    background-size: cover;
+    background-position: center;
+    padding: 60px 16px 40px;
+  }
+
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
   .hero-content h1 {
-    font-size: 32px;
+    font-size: 1.75rem;
+    color: #2c2c2c;
   }
 
   .hero-content p {
-    font-size: 16px;
+    font-size: 1rem;
+    color: #3a3a3a;
   }
 
   .cta-button {
-    font-size: 14px;
-    padding: 12px 20px;
+    font-size: 1rem;
+    padding: 0.875rem 1.625rem;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    color: white;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    box-shadow: 0 4px 12px rgba(238, 9, 121, 0.3);
+  }
+
+  .cta-button:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px rgba(238, 9, 121, 0.2);
   }
 
   .tagline {
-    font-size: 14px;
+    font-size: 0.875rem;
+    color: #5a2b34;
+  }
+}
+
+/* 📱 Small Phones: ≤480px */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .tagline {
+    font-size: 0.8rem;
+  }
+}
+
+/* 💻 Tablets: 769px–1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}
+
+/* 💻 Laptops: 1025px–1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero-content h1 {
+    font-size: 2.75rem;
+  }
+
+  .hero-content p {
+    font-size: 1.15rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
   }
 }

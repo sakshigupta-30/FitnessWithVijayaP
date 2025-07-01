@@ -4,6 +4,7 @@ import "./HeroSection.css";
 const HeroSection = () => {
   return (
     <section className="hero-section">
+      {/* Background Video - shown only on desktop */}
       <video
         className="hero-video"
         src="/hero-bg.mp4"
@@ -13,8 +14,10 @@ const HeroSection = () => {
         playsInline
       ></video>
 
+      {/* Overlay applied over both video and gradient */}
       <div className="hero-overlay"></div>
 
+      {/* Hero Text Content */}
       <div className="hero-content">
         <h1>
           <span className="underline">DANCE</span> YOUR HEART OUT WITH{" "}
