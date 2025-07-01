@@ -1,8 +1,19 @@
+/* Reset & scroll fix */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Navbar wrapper */
 body.menu-open {
   overflow: hidden;
 }
 
-/* 🔥 Faster Animation for Mobile Menu */
 @keyframes fadeSlideDown {
   from {
     opacity: 0;
@@ -15,15 +26,22 @@ body.menu-open {
 }
 
 .navbar {
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  margin: 0;
+  margin-right: 0%;
+  padding: 0;
   background-color: #FDFBFB;
-  color: #333;
+}
+
+.navbar-inner {
+  max-width: 100%;
+  padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 24px;
   font-family: 'Helvetica Neue', sans-serif;
-  position: relative;
-  z-index: 10;
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, #FF6600, #FF4C91) 1;
 }
@@ -60,7 +78,8 @@ body.menu-open {
 .nav-content {
   display: flex;
   align-items: center;
-  gap: 30px;
+  flex-grow: 1;
+  padding-left: 24px;
 }
 
 .nav-links {
@@ -70,6 +89,7 @@ body.menu-open {
   gap: 28px;
   font-size: 14px;
   white-space: nowrap;
+  flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -141,7 +161,10 @@ body.menu-open {
 .nav-buttons {
   display: flex;
   gap: 10px;
+  margin-left: auto;
+  flex-wrap: wrap;
 }
+
 .sign-in {
   background: #6A0DAD;
   color: white;
@@ -187,6 +210,7 @@ body.menu-open {
     position: absolute;
     top: 60px;
     left: 0;
+    right: 0;
     width: 100%;
     max-height: calc(100vh - 60px);
     overflow-y: auto;
@@ -196,7 +220,6 @@ body.menu-open {
     flex-direction: column;
     gap: 20px;
     z-index: 999;
-    box-sizing: border-box;
     animation: fadeSlideDown 0.25s ease forwards;
   }
 
